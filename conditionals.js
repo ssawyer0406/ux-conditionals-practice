@@ -25,7 +25,10 @@ function getColor(number) {
     return /* ( Your code Here ) ?  Your code Here  :  Your code Here */;
 }
 
-// Tests: Run these commands to make sure you did it right. They should all be true.
+/* 
+   -------TESTS---------------------------------------------------------------
+   Run these commands to make sure you did it right. They should all be true.
+*/
 console.log("Tests for Exercise One");
 console.log("Check for 15");
 console.log(getColor(15) === "blue");
@@ -50,7 +53,10 @@ function lightStatus(brightness) {
     return /* Put both ternary statements here, in one line */;
 }
 
-// Tests: Run these commands to make sure you did it right. They should all be true.
+/* 
+   -------TESTS---------------------------------------------------------------
+   Run these commands to make sure you did it right. They should all be true.
+*/
 console.log("Tests for Exercise Two");
 console.log("Check for 0");
 console.log(lightStatus(0) === "off");
@@ -92,7 +98,10 @@ function getLightBulbStatusDisplayString(status) {
     return result;
 }
 
-// Tests: Run these commands to make sure you did it right. They should all be true.
+/* 
+   -------TESTS---------------------------------------------------------------
+   Run these commands to make sure you did it right. They should all be true.
+*/
 console.log("Tests for Exercise Three");
 console.log("Check for on");
 console.log(getLightBulbStatusDisplayString("on") === "The house is bright!");
@@ -189,12 +198,15 @@ function turnOffLight(lightName) {
 */
 
 /* 
-   -------YOUR CODE-----------------------------------------------------------
+   -------START OF YOUR CODE-----------------------------------------------------------
 */
 function updateLights(somebodyIsHome, theyAreWatchingTV, itIsDarkOutside, theyAreCooking, theyWentToBed) {
 
     // Write your code here!  You don't need to return anything, just call the given functions
 }
+/* 
+   -------END OF YOUR CODE-----------------------------------------------------------
+*/
 
 /* 
    -------TESTS---------------------------------------------------------------
