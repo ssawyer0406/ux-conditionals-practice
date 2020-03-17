@@ -203,6 +203,11 @@ function turnOffLight(lightName) {
 function updateLights(somebodyIsHome, theyAreWatchingTV, itIsDarkOutside, theyAreCooking, theyWentToBed) {
 
     // Write your code here!  You don't need to return anything, just call the given functions
+    // You should be using if else statements and the function arguments
+    // example of turning a light on
+    turnOnLight("livingRoomLight");
+    // example of turning off a light
+    turnOffLight("livingRoomLight");
 }
 /* 
    -------END OF YOUR CODE-----------------------------------------------------------
