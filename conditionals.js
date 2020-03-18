@@ -29,12 +29,12 @@ function getColor(number) {
    -------TESTS---------------------------------------------------------------
    Run these commands to make sure you did it right. They should all be true.
 */
-console.log("Tests for Exercise One");
-console.log("Check for 15");
+console.log("-----Tests for Exercise One-----");
+console.log("* Check for 15");
 console.log(getColor(15) === "blue");
-console.log("Check for 5");
+console.log("* Check for 5");
 console.log(getColor(5) === "red");
-console.log("Check for 10");
+console.log("* Check for 10");
 console.log(getColor(10) === "red");
 
 /* ------------------------------------------------
@@ -57,14 +57,14 @@ function lightStatus(brightness) {
    -------TESTS---------------------------------------------------------------
    Run these commands to make sure you did it right. They should all be true.
 */
-console.log("Tests for Exercise Two");
-console.log("Check for 0");
+console.log("-----Tests for Exercise Two-----");
+console.log("* Check for 0");
 console.log(lightStatus(0) === "off");
-console.log("Check for 85");
+console.log("* Check for 85");
 console.log(lightStatus(85) === "dimmed");
-console.log("Check for 200");
+console.log("* Check for 200");
 console.log(lightStatus(200) === "on");
-console.log("Check for 255");
+console.log("* Check for 255");
 console.log(lightStatus(255) === "on");
 
 /* ------------------------------------------------
@@ -102,28 +102,28 @@ function getLightBulbStatusDisplayString(status) {
    -------TESTS---------------------------------------------------------------
    Run these commands to make sure you did it right. They should all be true.
 */
-console.log("Tests for Exercise Three");
-console.log("Check for on");
+console.log("-----Tests for Exercise Three-----");
+console.log("* Check for on");
 console.log(getLightBulbStatusDisplayString("on") === "The house is bright!");
-console.log("Check for off");
+console.log("* Check for off");
 console.log(getLightBulbStatusDisplayString("off") === "The house is dark");
-console.log("Check for dimmed");
+console.log("* Check for dimmed");
 console.log(getLightBulbStatusDisplayString("dimmed") === "The house is nice and dim");
-console.log("Check for offline");
+console.log("* Check for offline");
 console.log(getLightBulbStatusDisplayString("offline") === "The house is dark and we can't find the lightbulb!");
-console.log("Check for missing");
+console.log("* Check for missing");
 console.log(getLightBulbStatusDisplayString("missing") === "The house is dark and we can't find the lightbulb!");
-console.log("Check for deleted");
+console.log("* Check for deleted");
 console.log(getLightBulbStatusDisplayString("deleted") === "The lightbulb has been removed from the system");
-console.log("Check for broken");
+console.log("* Check for broken");
 console.log(getLightBulbStatusDisplayString("broken") === "The house is dark and we can't turn the light on!");
-console.log("Check for empty string");
+console.log("* Check for empty string");
 console.log(getLightBulbStatusDisplayString("") === "Something is wrong!");
-console.log("Check for 5");
+console.log("* Check for 5");
 console.log(getLightBulbStatusDisplayString(5) === "Something is wrong!");
-console.log("Check for false");
+console.log("* Check for false");
 console.log(getLightBulbStatusDisplayString(false) === "Something is wrong!");
-console.log("Check for null");
+console.log("* Check for null");
 console.log(getLightBulbStatusDisplayString(null) === "Something is wrong!");
 
 /* ------------------------------------------------
@@ -198,7 +198,7 @@ function turnOffLight(lightName) {
 */
 
 /* 
-   -------START OF YOUR CODE-----------------------------------------------------------
+   -------YOUR CODE-----------------------------------------------------------
 */
 function updateLights(somebodyIsHome, theyAreWatchingTV, itIsDarkOutside, theyAreCooking, theyWentToBed) {
 
@@ -209,17 +209,14 @@ function updateLights(somebodyIsHome, theyAreWatchingTV, itIsDarkOutside, theyAr
     // example of turning off a light
     turnOffLight("livingRoomLight");
 }
-/* 
-   -------END OF YOUR CODE-----------------------------------------------------------
-*/
 
 /* 
    -------TESTS---------------------------------------------------------------
    Run these commands to make sure you did it right. They should all be true.
 */
-console.log("Tests for Exercise Four");
+console.log("-----Tests for Exercise Four-----");
 
-console.log("Check if they are all off.");
+console.log("* Check if they are all off.");
 resetLights();
 updateLights(false, false, false, false, false)
 console.log(
@@ -229,7 +226,7 @@ console.log(
     currentLights.frontPorchLight == "off" &&
     currentLights.bedroomLight == "off");
 
-console.log("Check that the porch light turns on at night.");
+console.log("* Check that the porch light turns on at night.");
 resetLights();
 updateLights(false, false, true, false, false)
 console.log(
@@ -239,7 +236,7 @@ console.log(
     currentLights.frontPorchLight == "on" &&
     currentLights.bedroomLight == "off");
 
-console.log("Check when somebody is home");
+console.log("* Check when somebody is home");
 resetLights();
 updateLights(true, false, true, false, false)
 console.log(
@@ -249,7 +246,7 @@ console.log(
     currentLights.frontPorchLight == "on" &&
     currentLights.bedroomLight == "off");
 
-console.log("Check when they are cooking");
+console.log("* Check when they are cooking");
 resetLights();
 updateLights(true, false, true, true, false)
 console.log(
@@ -259,7 +256,7 @@ console.log(
     currentLights.frontPorchLight == "on" &&
     currentLights.bedroomLight == "off");
 
-console.log("Check when they are watching TV");
+console.log("* Check when they are watching TV");
 resetLights();
 updateLights(true, true, true, false, false)
 console.log(
@@ -269,7 +266,7 @@ console.log(
     currentLights.frontPorchLight == "on" &&
     currentLights.bedroomLight == "off");
 
-console.log("Check when they are in bed");
+console.log("* Check when they are in bed");
 resetLights();
 updateLights(true, false, true, false, true)
 console.log(
