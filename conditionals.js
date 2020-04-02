@@ -157,7 +157,7 @@ console.log(getLightBulbStatusDisplayString(null) === "Something is wrong!");
     If someone is home but they haven't gone to bed, then the living room and dining room lights should be on.
     if someone is cooking, then the kitchen light should be on.
     However, if they are watching TV, then turn off the livingroom and dining room lights.
-    
+    If they are in bed, then the bedroom light should be on.
 */
 
 /*
