@@ -1,277 +1,62 @@
-
 /*
-    Conditionals, Logic, and Formatting Practice
-
-    Today you are working on your Smart Home!  
-    Your smart home has many lights that are controllable, and you can use JavaScript
-    to control them.
+    Ternary Switch and Logic Practice
 
     Complete the Following Exercises.
 */
 
-/* ------------------------------------------------
-    Exercise One
+/*
+Exercise One
 
-    Choosing a color for a light.  
-
-    Given a number, decide which color should be returned.
-
-    Complete the following ternary statement.
-    If the number is > 10, return "blue"
-    otherwise return "red";
-*/
-function getColor(number) {
-    // Uncomment and complete
-    return /* ( Your code Here ) ?  Your code Here  :  Your code Here */;
-}
-
-/* 
-   -------TESTS---------------------------------------------------------------
-   Run these commands to make sure you did it right. They should all be true.
-*/
-console.log("-----Tests for Exercise One-----");
-console.log("* Check for 15");
-console.log(getColor(15) === "blue");
-console.log("* Check for 5");
-console.log(getColor(5) === "red");
-console.log("* Check for 10");
-console.log(getColor(10) === "red");
-
-/* ------------------------------------------------
-    Exercise Two
-
-    A controllable lightbulb has a brightness which is a numeric value between 0 and 255.
-    You need to create a function which returns a string which summarizes the status of the lightbulb.
-
-    Complete the following function using two nested ternary statments
-
-    If the brightness is zero, return "off"
-    otherwise if the brightness is greater than zero but less that 200, return "dimmed"
-    if the brightness is greater than or equal to 200, then return "on"
-*/
-function lightStatus(brightness) {
-    return /* Put both ternary statements here, in one line */;
-}
-
-/* 
-   -------TESTS---------------------------------------------------------------
-   Run these commands to make sure you did it right. They should all be true.
-*/
-console.log("-----Tests for Exercise Two-----");
-console.log("* Check for 0");
-console.log(lightStatus(0) === "off");
-console.log("* Check for 85");
-console.log(lightStatus(85) === "dimmed");
-console.log("* Check for 200");
-console.log(lightStatus(200) === "on");
-console.log("* Check for 255");
-console.log(lightStatus(255) === "on");
-
-/* ------------------------------------------------
-    Exercise Three
-
-    Given a lightbulb's status, create a switch statement which returns 
-    a nicely formatted user readable string.
-
-    A lightbulb can have any of the following statuses:
-    "on", "off", "dimmed", "offline", "deleted", "missing", "broken" 
-
-    If the lightbulb is on, return "The house is bright!"
-    If the lightbulb is dimmed, return "The house is nice and dim"
-    If the lightbulb is deleted, return "The lightbulb has been removed from the system"
-    If the lightbulb is off, return "The house is dark"
-    If the lightbulb is broken, return "The house is dark and we can't turn the light on!"
-    If the lightbulb is offline or missing, return "The house is dark and we can't find the lightbulb!"
-    If the lightbulb is any other value, then return "Something is wrong!"
+Is it larger than 10?
 */
 
-function getLightBulbStatusDisplayString(status) {
-    let result = "";
-    /* uncomment and complete
-    switch( your code here ) {
-      case "your code here": 
-        your code here;
-        break;
-      etc...
-    }
-    */
-    return result;
-}
+let number = 5;
 
-/* 
-   -------TESTS---------------------------------------------------------------
-   Run these commands to make sure you did it right. They should all be true.
-*/
-console.log("-----Tests for Exercise Three-----");
-console.log("* Check for on");
-console.log(getLightBulbStatusDisplayString("on") === "The house is bright!");
-console.log("* Check for off");
-console.log(getLightBulbStatusDisplayString("off") === "The house is dark");
-console.log("* Check for dimmed");
-console.log(getLightBulbStatusDisplayString("dimmed") === "The house is nice and dim");
-console.log("* Check for offline");
-console.log(getLightBulbStatusDisplayString("offline") === "The house is dark and we can't find the lightbulb!");
-console.log("* Check for missing");
-console.log(getLightBulbStatusDisplayString("missing") === "The house is dark and we can't find the lightbulb!");
-console.log("* Check for deleted");
-console.log(getLightBulbStatusDisplayString("deleted") === "The lightbulb has been removed from the system");
-console.log("* Check for broken");
-console.log(getLightBulbStatusDisplayString("broken") === "The house is dark and we can't turn the light on!");
-console.log("* Check for empty string");
-console.log(getLightBulbStatusDisplayString("") === "Something is wrong!");
-console.log("* Check for 5");
-console.log(getLightBulbStatusDisplayString(5) === "Something is wrong!");
-console.log("* Check for false");
-console.log(getLightBulbStatusDisplayString(false) === "Something is wrong!");
-console.log("* Check for null");
-console.log(getLightBulbStatusDisplayString(null) === "Something is wrong!");
+// 1. Create an if statement where the number is greater than 10.
+// If it is, then log "It is bigger than 10!" using console.log().
 
-/* ------------------------------------------------
-    Exercise Four
-
-    Now you need to write the logic for the entire home to control the lights.
-
-    You have the following Lightbulbs in the house:
-
-    livingRoomLight
-    diningRoomLight
-    kitchenLight
-    frontPorchLight
-    bedroomLight
-
-    Your home tells you the following conditions:
-
-    somebodyIsHome
-    theyAreWatchingTV
-    itIsDarkOutside
-    theyAreCooking
-    theyWentToBed
-
-    They are all booleans.
-
-
-    Implement this logic
-
-    If it's dark out, the porch light should be on.  If it's not dark, then it's off.
-    If nobody home, then turn all the lights off (except the porch light). 
-    If someone is home but they haven't gone to bed, then the living room and dining room lights should be on.
-    if someone is cooking, then the kitchen light should be on.
-    However, if they are watching TV, then turn off the livingroom and dining room lights.
-    If they are in bed, then the bedroom light should be on.
-*/
+// 2. Change the number variable to something larger than 10, run your code and
+// make sure it works.
 
 /*
-   -------START OF GIVEN CODE - DO NOT EDIT ------------------------------------
-   But do read through through this code.  Try to understand what it's doing.
+---------------------------------------------------------------------------
+Exercise Two
+
+Determining a color
 */
 
-let currentLights = {};
-function resetLights() {
-    currentLights = {
-        "livingRoomLight": "off",
-        "diningRoomLight": "off",
-        "kitchenLight": "off",
-        "frontPorchLight": "off",
-        "bedroomLight": "off"
-    };
-}
+let color = "";
+// 1. Pick either "blue", "red", or "green" and assign it to the color variable.
 
-function turnOnLight(lightName) {
-    // This turns on a light.
-    if (currentLights[lightName]) {
-        currentLights[lightName] = "on";
-    } else {
-        console.log("WARNING Incorrect light name! - " + lightName);
-    }
-}
+// 2. Create an if statement, if the color is "blue", then log "The sky is blue." using console.log
 
-function turnOffLight(lightName) {
-    // This turns off a light.
-    if (currentLights[lightName]) {
-        currentLights[lightName] = "off";
-    } else {
-        console.log("WARNING Incorrect light name! - " + lightName);
-    }
-}
+// 3. Create an else if statement, and if the color is "red" then log "The flower is red."
+
+// 4. create another else if statement where if the color is "green" then log "The Leaf is green."
+
+// 5. Finally, create an else statement and log "It is a different color".
+
+// 6. Test your code! Change the value of the color variable to different colors and run your code.
+// The correct message should log to the console.
+
 /*
-   -------END OF GIVEN CODE - DO NOT EDIT ------------------------------------
+---------------------------------------------------------------------------
+Exercise Three
+
+Create conditional statements to create the following results.
+
+If the number is greater than 10, and the number is less than 20, then print "Between 10 and 20!"
+If the number is greater than or equal to 20, then print "20 or greater!"
+If the number is exactly 16, then print "16!"
+If the number is less than or equal to 10, print "10 or less!";
+
+Hint: You may need to rearrange your conditions to make this easy!
+A good practice is to take the most restrictive condition and check it first (like 16),
+then work your way to the most broad condition ("Some other number").
+
+Hint Two: You can either do this with nested if statements, or you can do it with 
+a chain of if else statements, some of those just might need multible conditions (like: if (a && b) )
 */
 
-/* 
-   -------YOUR CODE-----------------------------------------------------------
-*/
-function updateLights(somebodyIsHome, theyAreWatchingTV, itIsDarkOutside, theyAreCooking, theyWentToBed) {
-
-    // Write your code here!  You don't need to return anything, just call the given functions
-    // You should be using if else statements and the function arguments
-    // example of turning a light on
-    turnOnLight("livingRoomLight");
-    // example of turning off a light
-    turnOffLight("livingRoomLight");
-}
-
-/* 
-   -------TESTS---------------------------------------------------------------
-   Run these commands to make sure you did it right. They should all be true.
-*/
-console.log("-----Tests for Exercise Four-----");
-
-console.log("* Check if they are all off.");
-resetLights();
-updateLights(false, false, false, false, false)
-console.log(
-    currentLights.livingRoomLight == "off" &&
-    currentLights.diningRoomLight == "off" &&
-    currentLights.kitchenLight == "off" &&
-    currentLights.frontPorchLight == "off" &&
-    currentLights.bedroomLight == "off");
-
-console.log("* Check that the porch light turns on at night.");
-resetLights();
-updateLights(false, false, true, false, false)
-console.log(
-    currentLights.livingRoomLight == "off" &&
-    currentLights.diningRoomLight == "off" &&
-    currentLights.kitchenLight == "off" &&
-    currentLights.frontPorchLight == "on" &&
-    currentLights.bedroomLight == "off");
-
-console.log("* Check when somebody is home");
-resetLights();
-updateLights(true, false, true, false, false)
-console.log(
-    currentLights.livingRoomLight == "on" &&
-    currentLights.diningRoomLight == "on" &&
-    currentLights.kitchenLight == "off" &&
-    currentLights.frontPorchLight == "on" &&
-    currentLights.bedroomLight == "off");
-
-console.log("* Check when they are cooking");
-resetLights();
-updateLights(true, false, true, true, false)
-console.log(
-    currentLights.livingRoomLight == "on" &&
-    currentLights.diningRoomLight == "on" &&
-    currentLights.kitchenLight == "on" &&
-    currentLights.frontPorchLight == "on" &&
-    currentLights.bedroomLight == "off");
-
-console.log("* Check when they are watching TV");
-resetLights();
-updateLights(true, true, true, false, false)
-console.log(
-    currentLights.livingRoomLight == "off" &&
-    currentLights.diningRoomLight == "off" &&
-    currentLights.kitchenLight == "off" &&
-    currentLights.frontPorchLight == "on" &&
-    currentLights.bedroomLight == "off");
-
-console.log("* Check when they are in bed");
-resetLights();
-updateLights(true, false, true, false, true)
-console.log(
-    currentLights.livingRoomLight == "off" &&
-    currentLights.diningRoomLight == "off" &&
-    currentLights.kitchenLight == "off" &&
-    currentLights.frontPorchLight == "on" &&
-    currentLights.bedroomLight == "on");
+let number = 5;
+// Your code here.
